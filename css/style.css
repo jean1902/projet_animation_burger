@@ -1,0 +1,313 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@keyframes slide1 {
+  0% {
+    left: 50%;
+    top: 50%;
+  }
+  100% {
+    left: 0;
+    top: 50%;
+  }
+}
+.box1:hover .box2 {
+  animation: slide1 2s linear;
+}
+.container_buger {
+  /* background-color: red; */
+ 
+  padding: 5px;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50% ,-50%);
+}
+.row_burger {
+  height: 7px;
+  width: 100%;
+  background-color: white;
+  border-radius: 13px;
+  margin-bottom: 8px;
+}
+.container_position_row{
+    position: relative;
+}
+.row_burger1{
+    position: absolute;
+    top: 11px ;
+}
+.row_burger2{
+    position: absolute;
+    top: 30px ;
+    opacity: 1;
+    transition: opacity 0.5s;
+}
+.row_burger3{
+    position: absolute;
+    top: 46px ;
+}
+.box1.active .row_burger1{
+    top:32px;
+    transform: rotate(135deg);
+}
+
+.box1.active .row_burger2{
+    transform: translateX(-20px);
+    opacity: 0;
+}
+.box1.active .row_burger3{
+    top: 32px;
+    transform: rotate(-135deg);
+}
+
+.container_box {
+  position: absolute;
+  width: 500px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  height: 400px;
+}
+.container_circle {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  position: absolute;
+  background-color: brown;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.icon_burger {
+  height: 50px;
+}
+.box {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  position: absolute;
+  animation: hover 3s;
+}
+.icon_box_choosen{
+    font-size: 60px;
+    color: rgb(206, 197, 197);
+}
+.add_supp{
+    display: block!important;
+}
+.box_choosen{
+    display: none;
+}
+.box_icon_choosen{
+    padding: 18px;
+}
+
+.box1 {
+  /* background-color: blue; */
+  z-index: 100000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box2 {
+  background-color: sandybrown;
+}
+.box3 {
+  background-color: chartreuse;
+}
+.box4 {
+  background-color: darkolivegreen;
+}
+.box5 {
+  background-color: hotpink;
+}
+.box6 {
+  background-color: rgb(29, 22, 26);
+}
+.box7 {
+  background-color: rgb(119, 8, 0);
+}
+.box8 {
+  background-color: rgba(106, 165, 184, 0.438);
+}
+.box9 {
+  background-color: crimson;
+}
+.active {
+  display: block;
+}
+
+
+
+.box2 {
+  animation: translate1 0.3s linear;
+  animation-fill-mode: forwards;
+  animation-delay: 0.1s;
+}
+.box3 {
+  animation: translate2 0.3s linear;
+  animation-fill-mode: forwards;
+  animation-delay: 0.5s;
+}
+.box4 {
+  animation: translate3 0.6s linear;
+  animation-fill-mode: forwards;
+  animation-delay: 0.9s;
+}
+.box5 {
+  animation: translate4 1s linear;
+  animation-fill-mode: forwards;
+  animation-delay: 1.3s;
+}
+.box6 {
+  animation: translate5 1s linear;
+  animation-fill-mode: forwards;
+  animation-delay: 1.7s;
+}
+.box7 {
+  animation: translate6 1s linear;
+  animation-fill-mode: forwards;
+  animation-delay: 2.1s;
+}
+.box8 {
+  animation: translate7 1s linear;
+  animation-fill-mode: forwards;
+  animation-delay: 2.4s;
+}
+.box9 {
+  animation: translate8 1s linear;
+  animation-fill-mode: forwards;
+  animation-delay: 2.8s;
+}
+  /*  au hover avec css */
+/* 
+.box1:hover ~ .box2 {
+  animation: translate1 0.3s linear;
+  animation-fill-mode: forwards;
+  animation-delay: 0.1s;
+}
+.box1:hover ~ .box3 {
+  animation: translate2 0.3s linear;
+  animation-fill-mode: forwards;
+  animation-delay: 0.5s;
+}
+.box1:hover ~ .box4 {
+  animation: translate3 0.6s linear;
+  animation-fill-mode: forwards;
+  animation-delay: 0.9s;
+}
+.box1:hover ~ .box5 {
+  animation: translate4 1s linear;
+  animation-fill-mode: forwards;
+  animation-delay: 1.3s;
+}
+.box1:hover ~ .box6 {
+  animation: translate5 1s linear;
+  animation-fill-mode: forwards;
+  animation-delay: 1.7s;
+}
+.box1:hover ~ .box7 {
+  animation: translate6 1s linear;
+  animation-fill-mode: forwards;
+  animation-delay: 2.1s;
+}
+.box1:hover ~ .box8 {
+  animation: translate7 1s linear;
+  animation-fill-mode: forwards;
+  animation-delay: 2.4s;
+}
+.box1:hover ~ .box9 {
+  animation: translate8 1s linear;
+  animation-fill-mode: forwards;
+  animation-delay: 2.8s;
+} */
+@keyframes translate1 {
+  0% {
+    left: 0;
+    top: 0;
+  }
+  100% {
+    top: 0;
+    left: 200px;
+  }
+}
+@keyframes translate2 {
+  0% {
+    right: 0;
+    top: 0;
+  }
+  100% {
+    top: 0;
+    right: 200px;
+  }
+}
+@keyframes translate3 {
+  0% {
+    left: 0;
+    top: 0;
+  }
+  100% {
+    top: -200px;
+  }
+}
+@keyframes translate4 {
+  0% {
+    left: 0;
+    top: 0;
+  }
+  100% {
+    top: 200px;
+  }
+}
+@keyframes translate5 {
+  0% {
+    left: 0;
+    top: 0;
+  }
+  100% {
+    top: -130%;
+    left: 170px;
+    /* transform: translate(140% ,-130%); */
+  }
+}
+@keyframes translate6 {
+  0% {
+    left: 0;
+    top: 0;
+  }
+  100% {
+    top: -130%;
+    right: 170px;
+    /* transform: translate(-140% ,-130%); */
+  }
+}
+@keyframes translate7 {
+  0% {
+    left: 0;
+    top: 0;
+  }
+  100% {
+    top: 150px;
+    left: -170px;
+    /* transform: translate(-230px,200px); */
+  }
+}
+@keyframes translate8 {
+  0% {
+    left: 0;
+    top: 0;
+  }
+  100% {
+    top: 150px;
+    left: 170px;
+    /* transform: translate(200px,200px); */
+  }
+}
